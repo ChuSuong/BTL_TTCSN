@@ -47,9 +47,9 @@ Sao chép mã
 ## 📦 Yêu cầu cài đặt
 Nếu bạn sử dụng Google Colab, mọi thư viện đều đã được cài sẵn. Nếu chạy cục bộ, bạn cần:
 
-bash
-Sao chép mã
-pip install pandas numpy scipy scikit-learn
+   ```bash
+    pip install pandas numpy scipy scikit-learn
+   ```
 
 ## 🔧 Hướng dẫn cài đặt
 Tải dữ liệu từ MovieLens (ratings_small.csv & movies.csv).
@@ -57,18 +57,16 @@ Tải notebook movie_recommendation.ipynb lên Google Colab.
 Lưu 2 file CSV vào Google Drive của bạn.
 
 ## ▶️ Hướng dẫn sử dụng
-Mount Google Drive trong Colab:
-
-python
-Sao chép mã
-from google.colab import drive
-drive.mount('/content/drive')
-Cập nhật đường dẫn tới file CSV trong code:
-
-python
-Sao chép mã
-movies = pd.read_csv('/content/drive/MyDrive/movies.csv')
-rating = pd.read_csv('/content/drive/MyDrive/ratings_small.csv')
+### Mount Google Drive trong Colab:
+   ```bash
+    from google.colab import drive
+    drive.mount('/content/drive')
+   ```
+### Cập nhật đường dẫn tới file CSV trong code:
+   ```bash
+  movies = pd.read_csv('/content/drive/MyDrive/movies.csv')
+  rating = pd.read_csv('/content/drive/MyDrive/ratings_small.csv')
+   ```
 Chạy toàn bộ notebook để huấn luyện và nhận kết quả gợi ý phim.
 
 ## ⚙️ Cách hoạt động
