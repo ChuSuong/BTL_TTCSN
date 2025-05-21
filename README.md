@@ -5,22 +5,23 @@
 Dự án này xây dựng hệ thống gợi ý phim dựa trên hành vi người dùng bằng thuật toán K-Nearest Neighbors (KNN). Dữ liệu được xử lý từ tập MovieLens, và thuật toán tìm ra những người dùng có sở thích tương tự để đề xuất phim mà người dùng hiện tại chưa xem.
 
 ## Mục lục
-📽️ [Giới thiệu](#giới thiệu).
+- [Giới thiệu](#giới-thiệu).
 
-✨ [Tính năng](#tính-năng)
+- [Tính năng](#tính-năng)
 
-🛠️ [Công nghệ sử dụng](#công-nghệ-sử-dụng)
+- [Công nghệ sử dụng](#công-nghệ-sử-dụng)
 
-📁 [Cấu trúc dự án](#cấu-trúc-dự-án)
+- [Cấu trúc dự án](#cấu-trúc-dự-án)
 
- 📦 [Yêu cầu cài đặt (Prerequisites)](#yêu-cầu-cài-đặt-prerequisites)
+- [Yêu cầu cài đặt (Prerequisites)](#yêu-cầu-cài-đặt-prerequisites)
 
-🔧 [Hướng dẫn cài đặt](#hướng-dẫn-cài-đặt)
+- [Hướng dẫn cài đặt](#hướng-dẫn-cài-đặt)
 
-▶️ [Hướng dẫn sử dụng](#hướng-dẫn-sử-dụng)
+- [Hướng dẫn sử dụng](#hướng-dẫn-sử-dụng)
 
-⚙️ [Cách hoạt động](#cách-hoạt-động)
-🤝 [Đóng góp](#đóng-góp)
+- [Cách hoạt động](#cách-hoạt-động)
+
+- [Đóng góp](#đóng-góp)
 
 ## ✨ Tính năng
 - Đọc và xử lý dữ liệu từ Google Drive.
@@ -30,9 +31,7 @@ Dự án này xây dựng hệ thống gợi ý phim dựa trên hành vi ngư�
 
 ## 🛠️ Công nghệ sử dụng
 - **Ngôn ngữ lập trình**:  Python
-
-- Google Colab
-
+- **IDE**: Google Colab
 - **Thư viện**:pandas, numpy, scikit-learn, scipy
 
 ## 📁 Cấu trúc dự án
@@ -44,30 +43,30 @@ Sao chép mã
 ├── movie_recommendation.ipynb # File notebook chính chạy hệ thống
 └── README.md                  # Tài liệu hướng dẫn
 
-## 📦 Yêu cầu cài đặt
+## Yêu cầu cài đặt
 Nếu bạn sử dụng Google Colab, mọi thư viện đều đã được cài sẵn. Nếu chạy cục bộ, bạn cần:
 
    ```bash
     pip install pandas numpy scipy scikit-learn
    ```
 
-## 🔧 Hướng dẫn cài đặt
+## Hướng dẫn cài đặt
 Tải dữ liệu từ MovieLens (ratings_small.csv & movies.csv).
 Tải notebook movie_recommendation.ipynb lên Google Colab.
 Lưu 2 file CSV vào Google Drive của bạn.
 
-## ▶️ Hướng dẫn sử dụng
-### Mount Google Drive trong Colab:
+## Hướng dẫn sử dụng
+ ### 1.Mount Google Drive trong Colab:
    ```bash
     from google.colab import drive
     drive.mount('/content/drive')
    ```
-### Cập nhật đường dẫn tới file CSV trong code:
+ ### 2.Cập nhật đường dẫn tới file CSV trong code:
    ```bash
   movies = pd.read_csv('/content/drive/MyDrive/movies.csv')
   rating = pd.read_csv('/content/drive/MyDrive/ratings_small.csv')
    ```
-Chạy toàn bộ notebook để huấn luyện và nhận kết quả gợi ý phim.
+ ### 3.Chạy toàn bộ notebook để huấn luyện và nhận kết quả gợi ý phim.
 
 ## ⚙️ Cách hoạt động
 - Chọn 200 người dùng đầu tiên từ tập dữ liệu.
